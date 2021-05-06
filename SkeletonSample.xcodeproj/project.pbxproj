@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,9 @@
 		CEAD42842640BFB2003CE8F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAD42822640BFB2003CE8F7 /* LaunchScreen.storyboard */; };
 		CEAD428F2640BFB2003CE8F7 /* SkeletonSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAD428E2640BFB2003CE8F7 /* SkeletonSampleTests.swift */; };
 		CEAD429A2640BFB2003CE8F7 /* SkeletonSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAD42992640BFB2003CE8F7 /* SkeletonSampleUITests.swift */; };
+		CEAD42AB2640C019003CE8F7 /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAD42AA2640C019003CE8F7 /* Cell.xib */; };
+		CEAD42B02640C037003CE8F7 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAD42AF2640C037003CE8F7 /* Cell.swift */; };
+		CEAD42B62640C264003CE8F7 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = CEAD42B52640C264003CE8F7 /* SkeletonView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,8 @@
 		CEAD42952640BFB2003CE8F7 /* SkeletonSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkeletonSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAD42992640BFB2003CE8F7 /* SkeletonSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonSampleUITests.swift; sourceTree = "<group>"; };
 		CEAD429B2640BFB2003CE8F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEAD42AA2640C019003CE8F7 /* Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
+		CEAD42AF2640C037003CE8F7 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEAD42B62640C264003CE8F7 /* SkeletonView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +110,8 @@
 				CEAD42742640BFAF003CE8F7 /* AppDelegate.swift */,
 				CEAD42762640BFAF003CE8F7 /* SceneDelegate.swift */,
 				CEAD42782640BFAF003CE8F7 /* ViewController.swift */,
+				CEAD42AA2640C019003CE8F7 /* Cell.xib */,
+				CEAD42AF2640C037003CE8F7 /* Cell.swift */,
 				CEAD427A2640BFAF003CE8F7 /* Main.storyboard */,
 				CEAD42802640BFB2003CE8F7 /* Assets.xcassets */,
 				CEAD42822640BFB2003CE8F7 /* LaunchScreen.storyboard */,
@@ -147,6 +155,9 @@
 			dependencies = (
 			);
 			name = SkeletonSample;
+			packageProductDependencies = (
+				CEAD42B52640C264003CE8F7 /* SkeletonView */,
+			);
 			productName = SkeletonSample;
 			productReference = CEAD42712640BFAF003CE8F7 /* SkeletonSample.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +229,9 @@
 				Base,
 			);
 			mainGroup = CEAD42682640BFAE003CE8F7;
+			packageReferences = (
+				CEAD42B42640C264003CE8F7 /* XCRemoteSwiftPackageReference "SkeletonView" */,
+			);
 			productRefGroup = CEAD42722640BFAF003CE8F7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -235,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEAD42842640BFB2003CE8F7 /* LaunchScreen.storyboard in Resources */,
+				CEAD42AB2640C019003CE8F7 /* Cell.xib in Resources */,
 				CEAD42812640BFB2003CE8F7 /* Assets.xcassets in Resources */,
 				CEAD427C2640BFAF003CE8F7 /* Main.storyboard in Resources */,
 			);
@@ -263,6 +278,7 @@
 			files = (
 				CEAD42792640BFAF003CE8F7 /* ViewController.swift in Sources */,
 				CEAD42752640BFAF003CE8F7 /* AppDelegate.swift in Sources */,
+				CEAD42B02640C037003CE8F7 /* Cell.swift in Sources */,
 				CEAD427F2640BFAF003CE8F7 /* SkeletonSample.xcdatamodeld in Sources */,
 				CEAD42772640BFAF003CE8F7 /* SceneDelegate.swift in Sources */,
 			);
@@ -597,6 +613,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CEAD42B42640C264003CE8F7 /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.15.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CEAD42B52640C264003CE8F7 /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEAD42B42640C264003CE8F7 /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		CEAD427D2640BFAF003CE8F7 /* SkeletonSample.xcdatamodeld */ = {
